@@ -1,6 +1,9 @@
 # rep-max
 A Node.js module that performs rep max calculations.
 
+[![Build Status](https://travis-ci.org/danielsmith4483/rep-max.svg?branch=master)](https://travis-ci.org/danielsmith4483/rep-max) [![Coverage Status](https://coveralls.io/repos/github/danielsmith4483/rep-max/badge.svg?branch=master)](https://coveralls.io/github/danielsmith4483/rep-max?branch=master) 
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/rep-max)
+
 ## Installation
 ```sh
 npm install rep-max --save
