@@ -5,6 +5,13 @@
  * @returns The estimated rep max.
  */
 export function repMax(weight: number, reps: number): number {
+    if (weight < 0) {
+        throw new RangeError("Negative weight ranges are not allowed.");
+    }
+    if (reps <= 0) {
+        throw new RangeError("Nonpositive rep ranges are not allowed.");
+    }
+
     if (reps == 1) {
         return weight;
     }

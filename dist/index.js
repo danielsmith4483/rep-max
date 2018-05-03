@@ -7,6 +7,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @returns The estimated rep max.
  */
 function repMax(weight, reps) {
+    if (weight < 0) {
+        throw new RangeError("Negative weight ranges are not allowed.");
+    }
+    if (reps <= 0) {
+        throw new RangeError("Nonpositive rep ranges are not allowed.");
+    }
     if (reps == 1) {
         return weight;
     }
