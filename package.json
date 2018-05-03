@@ -1,0 +1,31 @@
+{
+  "name": "rep-max",
+  "version": "0.0.1",
+  "description": "Module for rep max calculations.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielsmith4483/rep-max.git"
+  },
+  "keywords": [
+    "1rm",
+    "rep",
+    "weight",
+    "lift",
+    "strength",
+    "barbell"
+  ],
+  "author": "Daniel Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielsmith4483/rep-max/issues"
+  },
+  "homepage": "https://github.com/danielsmith4483/rep-max#readme",
+  "devDependencies": {
+    "typescript": "^2.8.3"
+  }
+}
