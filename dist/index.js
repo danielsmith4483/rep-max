@@ -13,7 +13,7 @@ function repMax(weight, reps) {
     if (reps <= 0) {
         throw new RangeError("Nonpositive rep ranges are not allowed.");
     }
-    if (reps == 1) {
+    if (reps === 1) {
         return weight;
     }
     return weight * (1 + reps / 30);

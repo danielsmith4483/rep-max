@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tslint --fix --force --project . && tsc",
     "test": "npm run build && mocha --reporter spec",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha test/*.js -- -R spec"
   },
@@ -32,6 +32,7 @@
     "coveralls": "^3.0.1",
     "istanbul": "^0.4.5",
     "mocha": "^5.1.1",
+    "tslint": "^5.10.0",
     "typescript": "^2.8.3"
   }
 }
