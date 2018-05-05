@@ -16,13 +16,13 @@ or
 yarn add rep-max
 ```
 
-## Usage
+## Usage - One-Rep Max
 
 ### Javascript
 
 ```javascript
 var repMax = require('rep-max');
-var result = repMax.repMax(135, 5);
+var result = repMax.oneRepMax(135, 5);
 console.log(result);
 ```
 
@@ -35,13 +35,42 @@ Expected output:
 
 ```typescript
 import { repMax } from 'rep-max';
-const result = repMax.repMax(135, 5);
+const result = repMax.oneRepMax(135, 5);
 console.log(result);
 ```
 
 Expected output:
 ```sh
 157.5
+```
+
+
+## Usage - N-Rep Max
+
+### Javascript
+
+```javascript
+var repMax = require('rep-max');
+var result = repMax.nRepMax(2, 135, 5);
+console.log(result.toFixed(2));
+```
+
+Expected output:
+```sh
+147.66
+```
+
+### TypeScript
+
+```typescript
+import { repMax } from 'rep-max';
+const result = repMax.nRepMax(2, 135, 5);
+console.log(result.toFixed(2);
+```
+
+Expected output:
+```sh
+147.66
 ```
 
 ## Test
