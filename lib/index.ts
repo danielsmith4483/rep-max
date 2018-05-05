@@ -96,10 +96,11 @@ const formulae: IFormulae = {
 };
 
 /**
- * Returns the estimated rep max for a given weight and rep count using the Epley formula.
+ * Returns the estimated One-Rep Max for a given weight and rep count using the Epley formula.
  * @param weight The weight used in the rep max calculation.
  * @param reps The number of reps used in the rep max calculation.
- * @returns The estimated rep max.
+ * @param options Optional parameter conforming to IOptions for supplying additional customization.
+ * @returns The estimated One-Rep Max.
  */
 export function oneRepMax(weight: number, reps: number, options?: IOptions): number {
     if (weight < 0) {
@@ -126,6 +127,14 @@ export function oneRepMax(weight: number, reps: number, options?: IOptions): num
     return output * weight;
 }
 
+/**
+ * Returns the estimated N-Rep Max for a given n, weight, and rep count using the Epley formula.
+ * @param n The number of reps for which the N-Rep Max calculation is intended.
+ * @param weight The weight used in the rep max calculation.
+ * @param reps The number of reps used in the rep max calculation.
+ * @param options Optional parameter conforming to IOptions for supplying additional customization.
+ * @returns The estimated N-Rep Max.
+ */
 export function nRepMax(n: number, weight: number, reps: number, options?: IOptions): number {
     if (n === 1) {
         return oneRepMax(weight, reps, options);
