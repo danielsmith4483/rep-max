@@ -57,3 +57,47 @@ describe('nRepMax function', () => {
         expect(oneRepMax).to.equal(repMax.oneRepMax(twoRepMax, 2));
     });
 });
+
+describe("formulae", () => {
+    const precision = 0.01;
+
+    it("should still use the provided formula when it falls back on oneRepMax", () => {
+        const options = {formula: "brzycki"}
+        expect(repMax.nRepMax(1, 100, 6, options)).to.be.closeTo(116.129032, precision);
+    });
+    it("should implement the Epley formula", () => {
+        const options = {formula: "epley"}
+        expect(repMax.oneRepMax(100, 6, options)).to.equal(120);
+        expect(repMax.nRepMax(2, 100, 6, options)).to.equal(112.5);
+    });
+    it("should implement the Brzycki formula", () => {
+        const options = {formula: "brzycki"}
+        expect(repMax.oneRepMax(100, 6, options)).to.be.closeTo(116.129032, precision);
+        expect(repMax.nRepMax(2, 100, 6, options)).to.be.closeTo(112.903226, precision);
+    });
+    it("should implement the McGlothin formula", () => {
+        const options = {formula: "mcGlothin"}
+        expect(repMax.oneRepMax(100, 6, options)).to.be.closeTo(117.270936, precision);
+        expect(repMax.nRepMax(2, 100, 6, options)).to.be.closeTo(112.530305, precision);
+    });
+    it("should implement the Lombardi formula", () => {
+        const options = {formula: "lombardi"}
+        expect(repMax.oneRepMax(100, 6, options)).to.be.closeTo(119.62312, precision);
+        expect(repMax.nRepMax(2, 100, 6, options)).to.be.closeTo(111.612318, precision);
+    });
+    it("should implement the Mayhew et al. formula", () => {
+        const options = {formula: "mayhew"}
+        expect(repMax.oneRepMax(100, 6, options)).to.be.closeTo(121.472876, precision);
+        expect(repMax.nRepMax(2, 100, 6, options)).to.be.closeTo(109.004232, precision);
+    });
+    it("should implement the O'Conner et al. formula", () => {
+        const options = {formula: "oConner"}
+        expect(repMax.oneRepMax(100, 6, options)).to.be.closeTo(115, precision);
+        expect(repMax.nRepMax(2, 100, 6, options)).to.be.closeTo(109.52381, precision);
+    });
+    it("should implement the Wathan formula", () => {
+        const options = {formula: "wathan"}
+        expect(repMax.oneRepMax(100, 6, options)).to.be.closeTo(120.33058, precision);
+        expect(repMax.nRepMax(2, 100, 6, options)).to.be.closeTo(114.441709, precision);
+    });
+});
