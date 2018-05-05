@@ -1,6 +1,6 @@
 {
   "name": "rep-max",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Module for rep max calculations.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
